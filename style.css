@@ -1,0 +1,298 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+:root {
+    /* Primary Colors */
+    --mustard-yellow: #d2a106; /* A vibrant mustard yellow */
+    --earthy-brown: #8b572a;   /* A warm, rich earthy brown */
+    --navy-blue: #34495e;      /* A deep, professional navy blue */
+
+    /* Secondary Colors */
+    --cream: #f5f5dc;          /* A soft, off-white cream */
+    --charcoal-gray: #36454f;  /* A muted, sophisticated charcoal gray */
+
+    /* Tertiary Color */
+    --burgundy: #800020;       /* A bold, deep burgundy for accents */
+
+    /* Additional Colors */
+    --light-gray: #d3d3d3;     /* Light gray for backgrounds or borders */
+    --dark-gray: #2f2f2f;      /* Dark gray, useful for text or shadows */
+
+        /* Font Families */
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Lato', sans-serif;
+}
+
+
+body {
+    background-color: var(--cream);
+    color: var(--dark-gray);
+    max-width:1200px;
+    font-family: var(--font-body);
+    font-weight: 400; /* Regular for body text */
+    margin:0px auto;;
+}
+
+
+
+h1 {
+    /*font VCR OSD
+    size idk yet
+    font color mustard yellow
+    font border (using shadow) one of those reds
+    background color i think, that purple
+    some margin, not too much, not too little
+    two borders using the same colors as the fonts*/
+    font-size:3rem;
+    letter-spacing: 0.4rem;
+    font-family: 'VCR OSD Mono', sans-serif;
+    text-transform:uppercase;
+    color: var(--mustard-yellow);
+    text-shadow: 3px 3px var(--burgundy), 3px -3px var(--burgundy), -3px 3px var(--burgundy), -3px -3px var(--burgundy);
+}
+
+h2, h3 {
+    color: var(--navy-blue);
+    font-family: var(--font-heading);
+    font-weight: 700; /* Bold for headings */
+}
+
+.caption, .subheading {
+    font-family: var(--font-body);
+    font-weight: 500; /* Medium for contrast */
+}
+
+a, .button-primary {
+    background-color: var(--mustard-yellow);
+    color: white;
+}
+
+footer {
+    background-color: var(--earthy-brown);
+    color: var(--cream);
+    height:100px;
+}
+
+header {
+    width:100%;
+    display:flex;
+    padding:20px 15%;
+    align-items: center;
+}
+
+.header-text {
+    padding-left:5%;
+}
+
+header p {
+    padding-top:10px;
+    font-style:italic;
+}
+
+main {
+    width:70%;
+    margin: 0 auto;
+}
+
+section {
+    margin:0 5%;
+}
+
+img.headshot {
+    border-radius:50%;
+    width:25%;
+    max-width:250px;
+}
+
+section {
+    background-color: #f5f5dc; /* Soft cream background */
+    padding: 50px 20px;
+    text-align: center; /* Center-align the section heading */
+}
+
+section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2em;
+    color: #34495e; /* Dark navy blue */
+    margin-bottom: 30px; /* Space between heading and cards */
+    position: relative;
+}
+
+section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background-color: #34495e; /* Navy blue accent line */
+}
+
+/* ... include the CSS for project cards and responsiveness ... */
+
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Creates a 3-column layout */
+    grid-gap: 20px; /* Spacing between cards */
+    padding: 20px; /* Padding around the entire grid */
+}
+
+.project-row {
+    display:flex;
+    padding: 5%;
+    border-bottom:0.1rem solid #36454f;
+}
+
+.project-row-left {
+    width:20%;
+    align-items: center;
+    margin:auto;
+}
+
+.project-row img {
+    max-width: 100%;
+    max-height: auto;
+}
+
+.project-row-text {
+    width:80%;
+}
+
+.project-card {
+    background-color: #E6E6FA; /* Light purple */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.project-image {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.project-title, .project-description {
+    padding: 15px;
+}
+
+.project-title {
+    color: #34495e; /* Dark navy blue */
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.project-description {
+    color: #36454f; /* Charcoal gray */
+    font-size: 1em;
+    flex-grow: 1; /* Ensures button aligns to bottom */
+}
+
+.project-button {
+    background-color: #d2a106; /* Mustard yellow */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    align-self: center;
+    margin-bottom: 15px;
+}
+
+.project-button:hover {
+    background-color: darken(#d2a106, 10%);
+}
+
+.gold-bar-btn {
+    background: linear-gradient(to right, #d4af37, #ffd700, #d4af37);
+    border: 3px solid #d4af37;
+    border-radius: 5px;
+    box-shadow: 
+      inset 0 3px 6px rgba(255, 255, 255, 0.3),
+      inset 0 -3px 6px rgba(0, 0, 0, 0.2);
+    color: #034d07; /* Emerald green */
+    font-weight: bold;
+    font-size: 18px;
+    padding: 20px 40px;
+    text-transform: uppercase;
+    text-shadow: 
+      inset 0 -4px 4px rgba(255, 255, 255, 0.8), /* Deeper inset shadow */
+      inset 0 4px 4px rgba(0, 0, 0, 0.2); /* Adding top inset shadow for depth */
+    transition: transform 0.3s, box-shadow 0.3s;
+    line-height: 1.2;
+    text-align: center;
+  }
+  
+  .gold-bar-btn:hover {
+    box-shadow: 
+      inset 0 3px 6px rgba(255, 255, 255, 0.3),
+      inset 0 -3px 6px rgba(0, 0, 0, 0.2),
+      0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .gold-bar-btn:active {
+    transform: translateY(1px);
+    box-shadow: 
+      inset 0 2px 4px rgba(255, 255, 255, 0.3),
+      inset 0 -2px 4px rgba(0, 0, 0, 0.2),
+      0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  .gold-bar-btn2 {
+    background: linear-gradient(to right, #d4af37, #ffd700, #d4af37);
+    border: 1px solid #c5a330;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: #034d07; /* Emerald green */
+    font-weight: bold;
+    font-size: 16px;
+    padding: 15px 30px;
+    text-transform: uppercase;
+    text-align: center;
+    text-shadow: 
+      1px 1px 0 #fff, /* Light top shadow for depth */
+      -1px -1px 0 #fff, /* Light bottom shadow for depth */
+      1px 1px 2px rgba(0, 0, 0, 0.4); /* Dark shadow for engraving effect */
+    transition: all 0.3s;
+  }
+  
+  .gold-bar-btn2:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(to right, #ffd700, #d4af37, #ffd700);
+  }
+  
+  .gold-bar-btn2:active {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(to right, #d4af37, #ffd700, #d4af37);
+  }
+  
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .projects-grid {
+        grid-template-columns: 1fr; /* 1 column for mobile */
+    }
+}
+
+
+/* ... additional styles ... */
