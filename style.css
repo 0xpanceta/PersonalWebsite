@@ -70,10 +70,21 @@ a, .button-primary {
     color: white;
 }
 
+nav {
+    background-color:var(--mustard-yellow);
+    opacity:0.25;
+    height:25px;
+}
+
 footer {
     background-color: var(--earthy-brown);
     color: var(--cream);
     height:100px;
+    text-align: center;
+}
+
+footer p {
+    padding:20px;
 }
 
 header {
@@ -105,6 +116,7 @@ img.headshot {
     border-radius:50%;
     width:25%;
     max-width:250px;
+    
 }
 
 section {
@@ -159,8 +171,12 @@ section h2::after {
     max-height: auto;
 }
 
+
+
 .project-row-text {
     width:80%;
+    margin:auto;
+    padding-left:10%;
 }
 
 .project-card {
@@ -183,6 +199,40 @@ section h2::after {
     height: auto;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+
+}
+
+.project-label {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 0.8em;
+    font-family: 'Lato', sans-serif;
+    color: white;
+    
+    text-align: center;
+    margin-top: 10px; /* Spacing above the label */
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.project-label p {
+    opacity: 0.75;
+}
+
+.label-idea {
+    background-color: var(--light-gray); /* Light Blue */
+}
+
+.label-wip {
+    background-color: var(--mustard-yellow); /* Mustard Yellow */
+}
+
+.label-active {
+    background-color: var(--burgundy); /* Earthy Brown */
+    /* or use Navy Blue: background-color: #34495e; */
 }
 
 .project-title, .project-description {
@@ -218,7 +268,7 @@ section h2::after {
 
 .gold-bar-btn {
     background: linear-gradient(to right, #d4af37, #ffd700, #d4af37);
-    border: 3px solid #d4af37;
+    border: 1px solid #d4af37;
     border-radius: 5px;
     box-shadow: 
       inset 0 3px 6px rgba(255, 255, 255, 0.3),
@@ -234,13 +284,14 @@ section h2::after {
     transition: transform 0.3s, box-shadow 0.3s;
     line-height: 1.2;
     text-align: center;
+    margin-top:15px;
   }
   
   .gold-bar-btn:hover {
     box-shadow: 
       inset 0 3px 6px rgba(255, 255, 255, 0.3),
       inset 0 -3px 6px rgba(0, 0, 0, 0.2),
-      0 4px 8px rgba(0, 0, 0, 0.3);
+      4px 4px 0px rgba(0, 0, 0, 0.7);
   }
   
   .gold-bar-btn:active {
@@ -251,33 +302,99 @@ section h2::after {
       0 2px 4px rgba(0, 0, 0, 0.3);
   }
   
-  .gold-bar-btn2 {
-    background: linear-gradient(to right, #d4af37, #ffd700, #d4af37);
-    border: 1px solid #c5a330;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    color: #034d07; /* Emerald green */
-    font-weight: bold;
-    font-size: 16px;
-    padding: 15px 30px;
-    text-transform: uppercase;
+  /* Blog Post Container */
+.blog-post {
+    font-family: Arial, sans-serif; /* Change as per your preference */
+    line-height: 1.6;
+    color: #333333; /* Default text color */
+    max-width: 800px; /* Or as per your layout */
+    margin: 0 auto; /* Center the blog post */
+    padding: 20px;
+
+}
+
+/* Headings */
+.blog-post h2 {
+    font-size: 1.5em;
+    color: var(--charcoal-gray); /* Heading color */
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+
+.blog-post h3 {
+    font-size: 1.2em;
+    color: var(--charcoal-gray);
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+
+/* Paragraphs */
+.blog-post p {
+    font-size: 1em;
+    margin-bottom: 1em;
+}
+
+/* Images */
+.blog-post img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Removes bottom space under image */
+    margin: 0 auto; /* Center images */
+}
+
+/* Lists */
+.blog-post ul,
+.blog-post ol {
+    margin-left: 20px;
+    margin-bottom: 1em;
+}
+
+.blog-post ul li,
+.blog-post ol li {
+    margin-bottom: 0.5em;
+}
+
+/* Links */
+.blog-post a {
+    color: #1a0dab; /* Standard link color */
+    text-decoration: underline;
+}
+
+.blog-post a:hover {
+    color: #0000ee;
+}
+
+/* Blockquotes (if used) */
+.blog-post blockquote {
+    border-left: 4px solid #ccc;
+    padding-left: 20px;
+    margin-left: 0;
+    color: #555;
+    font-style: italic;
+}
+
+.blog-post figure {
+    font-style: italic; 
     text-align: center;
-    text-shadow: 
-      1px 1px 0 #fff, /* Light top shadow for depth */
-      -1px -1px 0 #fff, /* Light bottom shadow for depth */
-      1px 1px 2px rgba(0, 0, 0, 0.4); /* Dark shadow for engraving effect */
-    transition: all 0.3s;
-  }
-  
-  .gold-bar-btn2:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    background: linear-gradient(to right, #ffd700, #d4af37, #ffd700);
-  }
-  
-  .gold-bar-btn2:active {
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-    background: linear-gradient(to right, #d4af37, #ffd700, #d4af37);
-  }
+    margin:25px auto;
+    padding: auto;
+}
+
+.blog-post img {
+    max-height:400px;
+    width:auto;
+}
+
+.blog-post figcaption {
+    padding: 10px 15%;
+    font-size: 0.8em;
+}
+
+
+/* Additional Elements as needed */
+/* ... */
+
+
   
 
 
